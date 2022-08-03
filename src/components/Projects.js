@@ -12,9 +12,7 @@ export default function Projects() {
             Apps I've Built
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo
-            facilis repellat ab cupiditate alias vero aliquid obcaecati quisquam
-            fuga dolore.
+            Followings are my hobby projects that contributes to improve my knowledge and experience regarding web application development. I use them for my current work, trying to make Team App project profitable in the long run.
           </p>
         </div>
         <div className="flex flex-wrap -m-4">

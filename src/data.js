@@ -1,34 +1,49 @@
 export const projects = [
   {
-    title: "React Reserve",
-    subtitle: "MERN Stack",
+    title: "My First Portfolio with Vue.js",
+    subtitle: "Vue.js project",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "./project-1.gif",
-    link: "https://reactbootcamp.com",
+      "This was my first attempt to build the portfolio by using Vue.js, simply supporting the list of my projects and experience",
+    image: "./portfolio_vue.png",
+    link: "https://keiichi031605.github.io/keiichi-portfolio-vue/#/",
   },
   {
-    title: "React Tracks",
-    subtitle: "React and Python",
+    title: "Inventory Manager with Ruby on Rails",
+    subtitle: "Ruby on Rails project",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "./project-2.gif",
-    link: "https://reedbarger.com",
+      "It was just a hobby project that enables us to manage the inventory level for the business, especially targeting to Officeworks",
+    image: "./officeinventory.png",
+    link: "https://officeinventorymanager.herokuapp.com/",
+  }
+];
+export const skills = [
+  {
+    title: "React",
+    image: "./react.png",
   },
   {
-    title: "DevChat",
-    subtitle: "React and Firebase",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "./project-3.gif",
-    link: "https://jsbootcamp.com",
+    title: "Vue",
+    image: "./vue.png",
   },
   {
-    title: "Epic Todo App",
-    subtitle: "React Hooks",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "./project-4.gif",
-    link: "https://pythonbootcamp.com",
+    title: "Rails",
+    image: "./rails.png",
+  }
+];
+export const experience = [
+  {
+    title: "Software Developer",
+    company: "Team App",
+    location: "Australia"
   },
+  {
+    title: "Coffee Production Roaster",
+    company: "Small Batch/Invercafé/Roasting Shed",
+    location: "Australia/Colombia/The UK"
+  },
+  {
+    title: "External/Internal Sales Developer",
+    company: "Yuasa Trading",
+    location: "Japan"
+  }
 ];
