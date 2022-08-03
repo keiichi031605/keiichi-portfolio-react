@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/keiichi-portfolio-react/static/css/main.e0545b8d.css",
+    "main.js": "/keiichi-portfolio-react/static/js/main.2ea6ecb0.js",
+    "static/js/787.aba51da8.chunk.js": "/keiichi-portfolio-react/static/js/787.aba51da8.chunk.js",
+    "index.html": "/keiichi-portfolio-react/index.html",
+    "main.e0545b8d.css.map": "/keiichi-portfolio-react/static/css/main.e0545b8d.css.map",
+    "main.2ea6ecb0.js.map": "/keiichi-portfolio-react/static/js/main.2ea6ecb0.js.map",
+    "787.aba51da8.chunk.js.map": "/keiichi-portfolio-react/static/js/787.aba51da8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e0545b8d.css",
+    "static/js/main.2ea6ecb0.js"
+  ]
+}
