@@ -1,6 +1,7 @@
 {
   "name": "keiichi-portfolio-react",
   "version": "0.1.0",
+  "homepage": "https://keiichi031605.github.io/keiichi-portfolio-react/",
   "private": true,
   "dependencies": {
     "@heroicons/react": "^1.0.6",
@@ -16,6 +17,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "rm": "rm -rf docs",
+    "mv": "mv build docs",
+    "git": "git add . && git commit && git push origin main",
+    "deploy": "npm run rm && npm run build && npm run mv && npm run git",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
