@@ -10,6 +10,11 @@ const StyledAvatar = styled(Avatar)(({ theme }) => ({
   width: theme.spacing(15),
   height: theme.spacing(15),
   margin: theme.spacing(10),
+  [theme.breakpoints.down('lg')]: {
+    width: theme.spacing(10),
+    height: theme.spacing(10),
+    margin: theme.spacing(1),
+  },
 }));
 
 const StyledTypographyTitle = styled(Typography)({
@@ -21,7 +26,7 @@ const StyledTypographySubtitle = styled(Typography)({
 });
 
 const StyledBox = styled(Box)({
-  padding: '200px',
+  padding: '150px',
   position: 'relative',
   width: '100vw',
   textAlign: 'center',
