@@ -1,53 +1,49 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Drawer from "@material-ui/core/Drawer";
-import Box from "@material-ui/core/Box";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import IconButton from "@material-ui/core/IconButton";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import Avatar from "@material-ui/core/Avatar";
-import Divider from "@material-ui/core/Divider";
-import Typography from "@material-ui/core/Typography";
-import ArrowBack from "@material-ui/icons/ArrowBack";
-import AssignmentInd from "@material-ui/icons/AssignmentInd";
-import Home from "@material-ui/icons/Home";
-import Apps from "@material-ui/icons/Apps";
-import ContactMail from "@material-ui/icons/ContactMail";
-import { makeStyles } from "@material-ui/core/styles";
-import avatar from "../avatar.png";
+import Drawer from "@mui/material/Drawer";
+import Box from "@mui/material/Box";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import Avatar from "@mui/material/Avatar";
+import Divider from "@mui/material/Divider";
+import Typography from "@mui/material/Typography";
+import ArrowBack from "@mui/icons-material/ArrowBack";
+import AssignmentInd from "@mui/icons-material/AssignmentInd";
+import Home from "@mui/icons-material/Home";
+import Apps from "@mui/icons-material/Apps";
+import ContactMail from "@mui/icons-material/ContactMail";
+import { styled } from '@mui/material/styles';
 
 import Footer from "../components/Footer";
 
-const useStyles = makeStyles((theme) => ({
-  appbar: {
-    background: "#222",
-    margin: 0,
-  },
-  arrow: {
-    color: "tomato",
-  },
-  title: {
-    color: "tan",
-  },
-  menuSliderContainer: {
-    width: 250,
-    background: "#511",
-    height: "100%",
-  },
-  avatar: {
-    display: "block",
-    margin: "0.5rem auto",
-    width: theme.spacing(13),
-    height: theme.spacing(13),
-  },
-  listItem: {
-    color: "tan",
-  },
+const StyledAppBar = styled(AppBar)({
+  background: "#222",
+  margin: 0,
+});
+
+const StyledIconButton = styled(IconButton)({
+  color: "tomato",
+});
+
+const StyledTypography = styled(Typography)({
+  color: "tan",
+});
+
+const StyledAvatar = styled(Avatar)(({ theme }) => ({
+  display: "block",
+  margin: "0.5rem auto",
+  width: theme.spacing(13),
+  height: theme.spacing(13),
 }));
+
+const StyledListItem = styled(ListItem)({
+  color: "tan",
+});
 
 const menuItems = [
   { listIcon: <Home />, listText: "Home", listPath: "/" },
@@ -59,27 +55,22 @@ const menuItems = [
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
-  const classes = useStyles();
-
   const sideList = () => (
-    <Box className={classes.menuSliderContainer} component="div">
-      <Avatar className={classes.avatar} src={avatar} alt="Mahmudul Alam" />
+    <Box component="div" sx={{ width: 250, background: "#511", height: "100%" }}>
+      <StyledAvatar src={process.env.PUBLIC_URL + "/images/keiichi.png"} alt="Keiichi Katsuno" />
       <Divider />
       <List>
         {menuItems.map((item, i) => (
-          <ListItem
+          <StyledListItem
             button
             key={i}
-            className={classes.listItem}
             onClick={() => setOpen(false)}
             component={Link}
             to={item.listPath}
           >
-            <ListItemIcon className={classes.listItem}>
-              {item.listIcon}
-            </ListItemIcon>
+            <ListItemIcon>{item.listIcon}</ListItemIcon>
             <ListItemText primary={item.listText} />
-          </ListItem>
+          </StyledListItem>
         ))}
       </List>
     </Box>
@@ -88,16 +79,16 @@ const Navbar = () => {
   return (
     <React.Fragment>
       <Box component="nav">
-        <AppBar position="static" className={classes.appbar}>
+        <StyledAppBar position="static">
           <Toolbar>
-            <IconButton onClick={() => setOpen(true)}>
-              <ArrowBack className={classes.arrow} />
-            </IconButton>
-            <Typography variant="h5" className={classes.title}>
+            <StyledIconButton onClick={() => setOpen(true)}>
+              <ArrowBack />
+            </StyledIconButton>
+            <StyledTypography variant="h5">
               Portfolio
-            </Typography>
+            </StyledTypography>
           </Toolbar>
-        </AppBar>
+        </StyledAppBar>
       </Box>
       <Drawer open={open} anchor="right" onClose={() => setOpen(false)}>
         {sideList()}

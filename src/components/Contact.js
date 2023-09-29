@@ -1,14 +1,13 @@
 import React from "react";
-import { styled, useTheme } from '@mui/system';
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
-import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
-import Button from '@mui/material/Button';
+import { styled, useTheme } from "@mui/system";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
+import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
+import Button from "@mui/material/Button";
+import Send from "@mui/icons-material/Send";
 
-import Send from "@material-ui/icons/Send";
-
-const useStyles = makeStyles((theme) => ({
+const useStyles = (theme) => ({
   contactContainer: {
     background: "#233",
     height: "100vh",
@@ -36,36 +35,36 @@ const useStyles = makeStyles((theme) => ({
   field: {
     margin: "1rem 0rem",
   },
-}));
+});
 
-const InputField = withStyles({
-  root: {
-    "& label.Mui-focused": {
-      color: "tomato",
+const InputField = styled(TextField)({
+  "& label.Mui-focused": {
+    color: "tomato",
+  },
+  "& label": {
+    color: "tan",
+  },
+  "& .MuiOutlinedInput-root": {
+    "& fieldset": {
+      borderColor: "tan",
     },
-    "& label": {
-      color: "tan",
+    "&:hover fieldset": {
+      borderColor: "tan",
     },
-    "& .MuiOutlinedInput-root": {
-      "& fieldset": {
-        borderColor: "tan",
-      },
-      "&:hover fieldset": {
-        borderColor: "tan",
-      },
-      "&.Mui-focused fieldset": {
-        color: "#fff",
-        borderColor: "tan",
-      },
+    "&.Mui-focused fieldset": {
+      color: "#fff",
+      borderColor: "tan",
     },
   },
-})(TextField);
+});
 
 const Contact = () => {
-  const classes = useStyles();
+  const theme = useTheme();
+  const classes = useStyles(theme);
+
   return (
     <Box component="div" className={classes.contactContainer}>
-      <Grid container justify="center">
+      <Grid container justifyContent="center">
         <Box component="form" className={classes.form}>
           <Typography variant="h5" className={classes.heading}>
             Hire or Contact me...

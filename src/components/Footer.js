@@ -1,37 +1,35 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import BottomNavigation from "@material-ui/core/BottomNavigation";
-import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
-import Facebook from "@material-ui/icons/Facebook";
-import Twitter from "@material-ui/icons/Twitter";
-import Instagram from "@material-ui/icons/Instagram";
+import { styled } from '@mui/material/styles';
+import BottomNavigation from "@mui/material/BottomNavigation";
+import BottomNavigationAction from "@mui/material/BottomNavigationAction";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
-const useStyles = makeStyles({
-  bottomNavContainer: {
-    background: "#222",
-    height: "55px",
-    overflow: "hidden",
-  },
-  root: {
-    "& .MuiSvgIcon-root": {
-      fill: "tan",
-      "&:hover": {
-        fill: "tomato",
-        fontSize: "1.8rem",
-      },
+const StyledBottomNavigation = styled(BottomNavigation)({
+  background: '#222',
+  height: '55px',
+  overflow: 'hidden',
+});
+
+const StyledBottomNavigationAction = styled(BottomNavigationAction)({
+  '& .MuiSvgIcon-root': {
+    fill: 'tan',
+    '&:hover': {
+      fill: 'tomato',
+      fontSize: '1.8rem',
     },
   },
 });
 
 const Footer = () => {
-  const classes = useStyles();
-
   return (
-    <BottomNavigation className={classes.bottomNavContainer}>
-      <BottomNavigationAction icon={<Facebook />} className={classes.root} />
-      <BottomNavigationAction icon={<Twitter />} className={classes.root} />
-      <BottomNavigationAction icon={<Instagram />} className={classes.root} />
-    </BottomNavigation>
+    <StyledBottomNavigation>
+      <StyledBottomNavigationAction icon={<FacebookIcon />} />
+      <StyledBottomNavigationAction icon={<TwitterIcon />} />
+      <StyledBottomNavigationAction icon={<InstagramIcon />} />
+    </StyledBottomNavigation>
   );
 };
+
 export default Footer;
