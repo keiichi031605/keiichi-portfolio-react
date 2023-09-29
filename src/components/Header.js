@@ -1,5 +1,4 @@
 import React from 'react';
-// import ParticlesBg from "particles-bg";
 
 export default function Header({resumeData}) {
 
