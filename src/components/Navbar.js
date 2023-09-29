@@ -20,6 +20,13 @@ import ContactMail from "@mui/icons-material/ContactMail";
 import { styled } from '@mui/material/styles';
 import Footer from "../components/Footer";
 
+const SideBarStyledBox = styled(Box)({
+  width: 250,
+  background: "#222",
+  height: "100%",
+  padding: "40px"
+});
+
 const StyledAppBar = styled(AppBar)({
   background: "#222",
   margin: 0,
@@ -41,21 +48,21 @@ const StyledAvatar = styled(Avatar)(({ theme }) => ({
 }));
 
 const StyledListItem = styled(ListItem)({
-  color: "tan",
+  color: "#dee0de",
 });
 
 const menuItems = [
-  { listIcon: <Home />, listText: "Home", listPath: "/" },
-  { listIcon: <AssignmentInd />, listText: "Resume", listPath: "/resume" },
-  { listIcon: <Apps />, listText: "Portfolio", listPath: "/portfolio" },
-  { listIcon: <ContactMail />, listText: "Contact", listPath: "/contact" },
+  { listIcon: <Home color="success" />, listText: "Home", listPath: "/" },
+  { listIcon: <AssignmentInd color="success" />, listText: "Resume", listPath: "/resume" },
+  { listIcon: <Apps color="success" />, listText: "Portfolio", listPath: "/portfolio" },
+  { listIcon: <ContactMail color="success" />, listText: "Contact", listPath: "/contact" },
 ];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const sideList = () => (
-    <Box component="div" sx={{ width: 250, background: "#511", height: "100%" }}>
+    <SideBarStyledBox component="div">
       <StyledAvatar src={process.env.PUBLIC_URL + "/images/keiichi.png"} alt="Keiichi Katsuno" />
       <Divider />
       <List>
@@ -72,7 +79,7 @@ const Navbar = () => {
           </StyledListItem>
         ))}
       </List>
-    </Box>
+    </SideBarStyledBox>
   );
 
   return (
@@ -84,7 +91,7 @@ const Navbar = () => {
               <ArrowBack />
             </StyledIconButton>
             <StyledTypography variant="h5">
-              Portfolio
+              Learn More
             </StyledTypography>
           </Toolbar>
         </StyledAppBar>
