@@ -17,12 +17,23 @@ const StyledAvatar = styled(Avatar)(({ theme }) => ({
   },
 }));
 
+const CursorContainer = styled(Box)({
+  position: 'relative',
+  '& .typed-cursor': {
+    position: 'absolute',
+    top: '50%',
+    left: '100%',
+    transform: 'translateY(-50%)',
+  },
+  margin: '12px'
+});
+
 const StyledTypographyTitle = styled(Typography)({
   color: '#dee0de',
 });
 
 const StyledTypographySubtitle = styled(Typography)({
-  color: null,
+  color: '#dee0de',
 });
 
 const StyledBox = styled(Box)({
@@ -51,7 +62,7 @@ const Header = () => {
 
     const subtitleStrings = [
       "A full-stack developer",
-      "Specialized with...",
+      "Specializing in...",
       "Ruby on Rails",
       "Vue.js",
       "React.js"
@@ -86,12 +97,16 @@ const Header = () => {
       <Grid container justifyContent="center">
         <StyledAvatar src={process.env.PUBLIC_URL + "/images/keiichi.png"} alt="Keiichi Katsuno" />
       </Grid>
-      <StyledTypographyTitle variant="h4" ref={titleRef}></StyledTypographyTitle>
-      <StyledTypographySubtitle 
-        variant="h5" 
-        ref={subtitleRef} 
-        style={{ color: subtitleColor }}
-      ></StyledTypographySubtitle>
+      <CursorContainer>
+        <StyledTypographyTitle variant="h4" ref={titleRef}></StyledTypographyTitle>
+      </CursorContainer>
+      <CursorContainer>
+        <StyledTypographySubtitle 
+          variant="h5" 
+          ref={subtitleRef} 
+          style={{ color: subtitleColor }}
+        ></StyledTypographySubtitle>
+      </CursorContainer>
     </StyledBox>
   );
 };
