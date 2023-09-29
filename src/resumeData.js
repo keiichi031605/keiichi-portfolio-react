@@ -1,10 +1,6 @@
 let resumeData = {
-    "imagebaseurl":"https://rbhatia46.github.io/",
     "name": "Keiichi Katsuno",
-    "role": "Frontend Developer and Data Scientist",
-    "linkedinId":"Your LinkedIn Id",
-    "skypeid": "Your skypeid",
-    "roleDescription": "I like dabbling in various parts of frontend development and like to learn about new technologies, write technical articles or simply play games in my free time.",
+    "description": "Full-stack web developer with a passion for crafting web-based solutions that address real-world challenges. Expertise in Ruby on Rails (backend) and React.js/Vue.js (frontend). Strong communicator, able to problem-solve both independently and collaboratively. Seeking a mid web application developer role to further enhance my skills and engage with emerging technologies.",
     "socialLinks":[
         {
           "name":"linkedin",
@@ -22,7 +18,7 @@ let resumeData = {
           "className":"fa fa-twitter"
         }
       ],
-    "aboutme":"I am currently a pre-final year student at The LNM Institute of Information Technology and pursuing my B.Tech from here. I am a self taught Full Stack Web Developer, currently diving deeper into Machine Learning. I believe that to be successful in life, one needs to be obsessive with their dreams and keep working towards them.",
+    "about":"I am currently a pre-final year student at The LNM Institute of Information Technology and pursuing my B.Tech from here. I am a self taught Full Stack Web Developer, currently diving deeper into Machine Learning. I believe that to be successful in life, one needs to be obsessive with their dreams and keep working towards them.",
     "address":"India",
     "website":"https://rbhatia46.github.io",
     "education":[

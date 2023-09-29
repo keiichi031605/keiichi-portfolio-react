@@ -1,6 +1,9 @@
 import './styles/layout.css';
+// import './styles/magnific-popup.css';
+// import './styles/media-queries.css';
+
 import Header from './components/Header';
-// import About from './components/About';
+import About from './components/About';
 // import Resume from './components/Resume';
 // import Portfolio from './components/Portfolio';
 // import Testimonials from  './components/Testimonials';
@@ -12,8 +15,8 @@ function App() {
   return (
     <div className="App">
       <Header resumeData={resumeData}/>
-      {/* <About resumeData={resumeData}/>
-      <Resume resumeData={resumeData}/>
+      <About resumeData={resumeData}/>
+      {/* <Resume resumeData={resumeData}/>
       <Portfolio resumeData={resumeData}/>
       <Testimonials resumeData={resumeData}/>
       <ContactUs resumeData={resumeData}/>
