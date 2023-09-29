@@ -21,23 +21,8 @@ export default function Header({resumeData}) {
             <h3 style={{color:'#fff', fontFamily: 'sans-serif '}}>
               {resumeData.description}
             </h3>
-            <hr/>
-            <ul className="social">
-                { resumeData.socialLinks && resumeData.socialLinks.map(
-                  item =>{
-                    return (
-                      <li key={item.name}>
-                        <a href={item.url} target="blank"><i className={item.className}></i></a>
-                      </li>
-                    )
-                  }
-                )}
-            </ul>
           </div>
         </div>
-        <p className="scroll-down">
-          <a className="smoothscroll" href="#about"><i className="icon-down-circle"></i></a>
-        </p>
       </header>
     </React.Fragment>
   );
