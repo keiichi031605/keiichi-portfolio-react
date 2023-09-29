@@ -18,7 +18,6 @@ import Home from "@mui/icons-material/Home";
 import Apps from "@mui/icons-material/Apps";
 import ContactMail from "@mui/icons-material/ContactMail";
 import { styled } from '@mui/material/styles';
-
 import Footer from "../components/Footer";
 
 const StyledAppBar = styled(AppBar)({
@@ -27,11 +26,11 @@ const StyledAppBar = styled(AppBar)({
 });
 
 const StyledIconButton = styled(IconButton)({
-  color: "tomato",
+  color: "#85c27e",
 });
 
 const StyledTypography = styled(Typography)({
-  color: "tan",
+  color: "#dee0de",
 });
 
 const StyledAvatar = styled(Avatar)(({ theme }) => ({
