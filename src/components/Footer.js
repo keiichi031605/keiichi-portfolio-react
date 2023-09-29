@@ -2,9 +2,8 @@ import React from "react";
 import { styled } from '@mui/material/styles';
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 const StyledBottomNavigation = styled(BottomNavigation)({
   background: '#222',
@@ -14,9 +13,9 @@ const StyledBottomNavigation = styled(BottomNavigation)({
 
 const StyledBottomNavigationAction = styled(BottomNavigationAction)({
   '& .MuiSvgIcon-root': {
-    fill: 'tan',
+    fill: '#dee0de',
     '&:hover': {
-      fill: 'tomato',
+      fill: '#dee0de',
       fontSize: '1.8rem',
     },
   },
@@ -25,9 +24,20 @@ const StyledBottomNavigationAction = styled(BottomNavigationAction)({
 const Footer = () => {
   return (
     <StyledBottomNavigation>
-      <StyledBottomNavigationAction icon={<FacebookIcon />} />
-      <StyledBottomNavigationAction icon={<TwitterIcon />} />
-      <StyledBottomNavigationAction icon={<InstagramIcon />} />
+      <StyledBottomNavigationAction
+        component="a"
+        href="https://www.linkedin.com/in/keiichi-katsuno/" 
+        icon={<LinkedInIcon />}
+        target="_blank" 
+        rel="noopener noreferrer"
+      />
+      <StyledBottomNavigationAction
+        component="a"
+        href="https://github.com/keiichi031605"
+        icon={<GitHubIcon />}
+        target="_blank" 
+        rel="noopener noreferrer"
+      />
     </StyledBottomNavigation>
   );
 };
